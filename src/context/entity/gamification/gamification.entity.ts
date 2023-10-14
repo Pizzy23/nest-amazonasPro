@@ -13,7 +13,9 @@ export class GamificationEntity {
     };
     await this.prisma.user.update({
       where: { UUID: input.uuid },
-      data: data,
+      data: {
+        Gamefication: data.Gamefication,
+      },
     });
   }
 }
