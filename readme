@@ -1,0 +1,140 @@
+# Amazonas Ser Pro
+
+Bem-vindo à aplicação MeuABC+ , uma plataforma educacional projetada para ajudar os usuários a aprender e entender os princípios da sustentabilidade e como eles podem contribuir para um meio ambiente mais saudável através da integração de tecnologia, gamificação e educação.
+
+### Como instalar a parte do Back
+
+Certifique-se de ter o Node.js instalado em sua máquina.
+
+Instalar o projeto.
+
+```
+npm install
+```
+
+Iniciar o projeto:
+
+```
+nest start
+localhost:3000/api
+```
+
+Teste na AWS:
+
+```
+
+```
+
+# Casos de uso
+
+1. Gamificação do Score de Carbono por Área e Emissões Mensais
+   Resumo:
+
+   - Os usuários participam de um jogo de gamificação onde ganham pontos com base na quantidade de carbono que ajudam a remover ou armazenar no ambiente.
+   - Os pontos são calculados a partir de duas fontes principais: a quantidade de carbono armazenada nas áreas monitoradas e as emissões mensais evitadas.
+   - A gamificação incentiva os usuários a adotar práticas sustentáveis para reduzir as emissões de carbono e aumentar a capacidade de armazenamento.
+
+   ### Ator Principal:
+
+   - Usuário da aplicação.
+
+   ### Fluxo de Eventos:
+
+   1. Os usuários registram áreas de plantio de árvores, projetos de reflorestamento ou outras atividades de sequestro de carbono.
+   2. A aplicação mede e rastreia a quantidade de carbono armazenada em cada área com a ajuda de sensores Arduino.
+   3. A pontuação do usuário é atualizada com base no carbono armazenado nas áreas registradas.
+   4. A cada mês, a aplicação calcula a quantidade de emissões de carbono evitadas pelos usuários devido a práticas sustentáveis.
+   5. A pontuação do usuário também é atualizada com base nas emissões evitadas.
+   6. Os usuários podem competir e comparar suas pontuações com outros participantes.
+
+2. Login e Registro Seguros
+
+   ## Resumo:
+
+   - A aplicação oferece um sistema seguro de autenticação para garantir que as informações dos usuários estejam protegidas.
+   - A segurança dos dados é uma prioridade para proteger informações pessoais, pontuações de carbono e atividades.
+
+   ### Ator Principal:
+
+   Usuário da aplicação.
+
+   ### Fluxo de Eventos:
+
+   1. Os usuários criam uma conta fornecendo informações pessoais, como nome, e-mail e senha.
+   2. A aplicação valida as informações e cria uma conta para o usuário.
+   3. Usuários registrados acessam a aplicação inserindo suas credenciais (e-mail e senha).
+   4. A aplicação verifica as credenciais para garantir que apenas usuários autorizados acessem suas contas.
+   5. Mecanismos de segurança, como autenticação de dois fatores, podem ser implementados para proteger ainda mais as contas dos usuários.
+
+3. Cálculo de Carbono Armazenado por Área
+   ### Resumo:
+   - A aplicação permite que os usuários registrem áreas de plantio de árvores ou projetos de reflorestamento.
+   - A quantidade de carbono armazenada nas áreas é calculada com a ajuda de sensores Arduino.
+   - Isso permite que os usuários acompanhem o impacto ambiental de suas atividades de reflorestamento.
+
+- Ator Principal:
+
+### Usuário da aplicação.
+
+### Fluxo de Eventos:
+
+1. O usuário inicia a sessão na aplicação e acessa a função de registro de área de plantio de árvores.
+2. O usuário fornece detalhes sobre a área, como localização geográfica, tamanho e tipo de árvores plantadas.
+3. Sensores Arduino medem a quantidade de carbono armazenada nas árvores e no solo da área registrada.
+4. Os dados do sensor são enviados para a aplicação, que calcula a quantidade total de carbono armazenada.
+5. Os usuários podem monitorar a quantidade de carbono armazenada ao longo do tempo e ver o impacto de suas atividades de reflorestamento no meio ambiente.
+
+# Design Patterns (Backend)
+
+- Decorators
+- Singleton
+- Factory
+
+# External Packages (Backend)
+
+- NestJs
+- Jest
+
+# Arquitetura usada (Backend)
+
+- Hexagonal Architecture
+- Modular
+
+## Futuro
+
+# Visão de Futuro para a Aplicação de Gamificação e Sustentabilidade
+
+À medida que avançamos no desenvolvimento da aplicação de gamificação e sustentabilidade, nossa visão de futuro é maximizar o uso de sensores Arduino no solo para coletar informações valiosas e fornecer um cuidado excepcional às plantações dos usuários. Aqui estão os principais pontos de nossa visão de futuro:
+
+### 1. Monitoramento Avançado com Sensores Arduino
+
+- Queremos implementar sensores Arduino de última geração no solo das áreas registradas pelos usuários. Esses sensores coletarão uma ampla gama de informações, incluindo:
+- Nível de Umidade do Solo: Monitorar o nível de umidade do solo para garantir que as plantas recebam a quantidade certa de água. Os usuários poderão receber alertas quando for necessário irrigar suas áreas.
+- Qualidade do Solo: Medir a qualidade do solo, incluindo nutrientes e pH, para otimizar as condições de crescimento das plantas.
+- CO2 no Solo: Acompanhar os níveis de dióxido de carbono no solo, permitindo um monitoramento eficaz do ciclo de carbono nas áreas de reflorestamento.
+- Nível de Compostagem: Monitorar a taxa de decomposição da matéria orgânica no solo, auxiliando na manutenção de um solo saudável.
+
+### 2. Aplicação de Algoritmos de Aprendizado de Máquina
+
+- Utilizaremos algoritmos de aprendizado de máquina para processar os dados coletados pelos sensores Arduino. Isso nos permitirá:
+- Previsão de Necessidades de Cuidados: Com base nos dados coletados, a aplicação poderá prever quando as plantas precisam de água, nutrientes ou outros cuidados específicos.
+- Identificação de Padrões: Identificar padrões de crescimento e saúde das plantas e fornecer orientações aos usuários com base nessas observações.
+- Emissões de Carbono em Tempo Real: Acompanhar as emissões de carbono e o sequestro em tempo real, fornecendo atualizações regulares aos usuários sobre o impacto de suas ações.
+
+### 3. Melhorias Contínuas na Gamificação
+
+- Continuaremos a aprimorar a gamificação da aplicação. Isso inclui:
+- Desafios Ambientais: Criar desafios ambientais para os usuários, onde eles podem competir de maneira saudável para reduzir emissões de carbono e aumentar o armazenamento.
+- Recompensas Significativas: Oferecer recompensas tangíveis aos usuários com base em seu desempenho, como descontos em produtos ecológicos ou árvores reais plantadas em seus nomes.
+- Comunidade Sustentável: Facilitar a formação de uma comunidade online onde os usuários possam compartilhar suas experiências e conhecimentos sobre práticas sustentáveis.
+
+### 4. Educação e Conscientização
+
+- Conscientização ambiental é fundamental. Queremos tornar nossa aplicação uma fonte valiosa de educação sobre sustentabilidade e reflorestamento. Isso inclui:
+- Materiais Educacionais: Fornecer recursos educacionais, como artigos, vídeos e tutoriais, para ensinar os usuários sobre a importância de reflorestamento e práticas sustentáveis.
+- Impacto Visual: Mostrar o impacto visual das ações dos usuários na aplicação, como a redução de emissões de carbono e o crescimento de áreas de reflorestamento.
+- Parcerias de Educação: Colaborar com organizações e instituições de ensino para promover a educação ambiental por meio de nossa plataforma.
+
+## Testes
+
+Os testes unitários são uma parte essencial do desenvolvimento de software, pois ajudam a garantir que pequenas partes do código (geralmente funções ou métodos) funcionem conforme o esperado. O framework Jest é uma escolha popular para escrever testes unitários em JavaScript e TypeScript. Abaixo, vou mostrar como criar testes unitários básicos usando Jest.

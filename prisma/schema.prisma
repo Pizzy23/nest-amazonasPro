@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Register {
+  idRegister Int     @id @default(autoincrement())
+  Name       String?
+  Email      String  @unique @default("")
+  User       User[]
+}
+
+model Login {
+  idLogin   Int     @id @default(autoincrement())
+  Is_Logged Boolean
+  User      User[]
+}
+
+model Gamefication {
+  idGamefication Int     @id @default(autoincrement())
+  Score          Decimal
+  User           User[]
+}
+
+model Farm {
+  idFarm      Int     @id @default(autoincrement())
+  Carbon      Decimal
+  PlantHealth Decimal
+  Area        Decimal
+  User        User[]
+}
+
+model User {
+  idUser         Int          @id @default(autoincrement())
+  UUID           String       @unique @default("")
+  FarmId         Int
+  GameficationId Int
+  RegisterId     Int
+  LoginId        Int
+  Farm           Farm         @relation(fields: [FarmId], references: [idFarm])
+  Gamefication   Gamefication @relation(fields: [GameficationId], references: [idGamefication])
+  Register       Register     @relation(fields: [RegisterId], references: [idRegister])
+  Login          Login        @relation(fields: [LoginId], references: [idLogin])
+}
