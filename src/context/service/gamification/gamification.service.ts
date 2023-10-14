@@ -54,5 +54,6 @@ export class GamificationService {
       score: resultScore,
     };
     await this.repository.updateGamification(data);
+    return { res: 'Score aumentado :)', status: HttpStatus.OK };
   }
 }

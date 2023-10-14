@@ -1,5 +1,5 @@
 import { GamificationService } from 'src/context/service';
-import { Controller, Get, Body, UseInterceptors } from '@nestjs/common';
+import { Controller, Get, Headers, UseInterceptors } from '@nestjs/common';
 import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { SuccessInterceptor } from 'src/config/interceptor/sucess-interceptor';
 import { UserDto } from 'src/view/dto';
@@ -14,7 +14,7 @@ export class GamificationController {
   })
   @UseInterceptors(SuccessInterceptor)
   @Get('/')
-  async getGamification(@Body() input: UserDto) {
+  async getGamification(@Headers() input: UserDto) {
     return await this.service.getGamification(input);
   }
 }

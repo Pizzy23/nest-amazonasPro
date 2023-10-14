@@ -8,14 +8,12 @@ export class GamificationEntity {
   async updateGamification(input: GamificationDto) {
     const data = {
       Gamefication: {
-        update: { score: input.score },
+        update: { Score: input.score },
       },
     };
     await this.prisma.user.update({
       where: { UUID: input.uuid },
-      data: {
-        Gamefication: data.Gamefication,
-      },
+      data: data,
     });
   }
 }
